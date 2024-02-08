@@ -1,0 +1,32 @@
+{
+  "name": "@forcepoint/tokens",
+  "version": "1.0.0",
+  "description": "Tokens for Forcepoint branding source of truth for various projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fourkitchens/fp-design-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fourkitchens/fp-design-tokens/issues"
+  },
+  "homepage": "https://github.com/fourkitchens/fp-design-tokens",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "npm run transform && npm run style-dictionary:build",
+    "husky:commit-msg": "commitlint --edit $1",
+    "prepare": "husky install",
+    "prettier": "prettier tokens --ignore-unknown",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^8.0.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.6",
+    "semantic-release": "^18.0.1"
+  }
+}
